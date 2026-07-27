@@ -1,0 +1,531 @@
+POKEMONS = {
+
+    # =========================
+    # GRASS
+    # =========================
+
+    "Bulbasaur": {
+        "types": ["Grass"],
+        "hp": 45,
+        "attack": 49,
+        "defense": 49,
+        "speed": 45,
+        "experience": 0,
+        "xp_to_next_level": 100,
+        "evolves_to": "Ivysaur",
+        "evolution_level": 16,
+        "moves": [
+            "Tackle",
+            "Vine Whip"
+        ]
+    },
+
+    "Ivysaur": {
+        "types": ["Grass"],
+        "hp": 60,
+        "attack": 62,
+        "defense": 63,
+        "speed": 60,
+        "experience": 0,
+        "xp_to_next_level": 200,
+        "evolves_to": "Venusaur",
+        "evolution_level": 32,
+        "moves": [
+            "Vine Whip",
+            "Razor Leaf",
+            "Leech Seed"
+        ]
+    },
+
+    "Venusaur": {
+        "types": ["Grass"],
+        "hp": 82,
+        "attack": 82,
+        "defense": 83,
+        "speed": 80,
+        "experience": 0,
+        "xp_to_next_level": None,
+        "evolves_to": None,
+        "evolution_level": None,
+        "moves": [
+            "Razor Leaf",
+            "Solar Beam",
+            "Leech Seed"
+        ]
+    },
+
+    # =========================
+    # FIRE
+    # =========================
+
+    "Charmander": {
+        "types": ["Fire"],
+        "hp": 39,
+        "attack": 52,
+        "defense": 43,
+        "speed": 65,
+        "experience": 0,
+        "xp_to_next_level": 100,
+        "evolves_to": "Charmeleon",
+        "evolution_level": 16,
+        "moves": [
+            "Scratch",
+            "Ember"
+        ]
+    },
+
+    "Charmeleon": {
+        "types": ["Fire"],
+        "hp": 58,
+        "attack": 64,
+        "defense": 58,
+        "speed": 80,
+        "experience": 0,
+        "xp_to_next_level": 200,
+        "evolves_to": "Charizard",
+        "evolution_level": 36,
+        "moves": [
+            "Ember",
+            "Metal Claw",
+            "Flamethrower"
+        ]
+    },
+
+    "Charizard": {
+        "types": ["Fire", "Flying"],
+        "hp": 78,
+        "attack": 84,
+        "defense": 78,
+        "speed": 100,
+        "experience": 0,
+        "xp_to_next_level": None,
+        "evolves_to": None,
+        "evolution_level": None,
+        "moves": [
+            "Flamethrower",
+            "Fire Blast",
+            "Wing Attack"
+        ]
+    },
+
+    # =========================
+    # WATER
+    # =========================
+
+    "Squirtle": {
+        "types": ["Water"],
+        "hp": 44,
+        "attack": 48,
+        "defense": 65,
+        "speed": 43,
+        "experience": 0,
+        "xp_to_next_level": 100,
+        "evolves_to": "Wartortle",
+        "evolution_level": 16,
+        "moves": [
+            "Tackle",
+            "Water Gun"
+        ]
+    },
+
+    "Wartortle": {
+        "types": ["Water"],
+        "hp": 59,
+        "attack": 63,
+        "defense": 80,
+        "speed": 58,
+        "experience": 0,
+        "xp_to_next_level": 200,
+        "evolves_to": "Blastoise",
+        "evolution_level": 36,
+        "moves": [
+            "Water Gun",
+            "Bubble",
+            "Bite"
+        ]
+    },
+
+    "Blastoise": {
+        "types": ["Water"],
+        "hp": 79,
+        "attack": 83,
+        "defense": 100,
+        "speed": 78,
+        "experience": 0,
+        "xp_to_next_level": None,
+        "evolves_to": None,
+        "evolution_level": None,
+        "moves": [
+            "Hydro Pump",
+            "Surf",
+            "Bite"
+        ]
+    },
+
+    # =========================
+    # ELECTRIC
+    # =========================
+
+    "Pikachu": {
+        "types": ["Electric"],
+        "hp": 35,
+        "attack": 55,
+        "defense": 40,
+        "speed": 90,
+        "experience": 0,
+        "xp_to_next_level": 100,
+        "evolves_to": "Raichu",
+        "evolution_level": 30,
+        "moves": [
+            "Thunder Shock",
+            "Quick Attack"
+        ]
+    },
+
+    "Magnemite": {
+        "types": ["Electric"],
+        "hp": 40,
+        "attack": 35,
+        "defense": 70,
+        "speed": 45,
+        "experience": 0,
+        "xp_to_next_level": 100,
+        "evolves_to": "Magneton",
+        "evolution_level": 30,
+        "moves": [
+            "Thunder Shock",
+            "Spark"
+        ]
+    },
+
+    "Voltorb": {
+        "types": ["Electric"],
+        "hp": 40,
+        "attack": 30,
+        "defense": 50,
+        "speed": 100,
+        "experience": 0,
+        "xp_to_next_level": 100,
+        "evolves_to": "Electrode",
+        "evolution_level": 30,
+        "moves": [
+            "Spark",
+            "Swift"
+        ]
+    },
+
+    # =========================
+    # FLYING
+    # =========================
+
+    "Pidgey": {
+        "types": ["Flying"],
+        "hp": 40,
+        "attack": 45,
+        "defense": 40,
+        "speed": 56,
+        "experience": 0,
+        "xp_to_next_level": 100,
+        "evolves_to": "Pidgeotto",
+        "evolution_level": 18,
+        "moves": [
+            "Tackle",
+            "Gust"
+        ]
+    },
+
+    "Spearow": {
+        "types": ["Flying"],
+        "hp": 40,
+        "attack": 60,
+        "defense": 30,
+        "speed": 70,
+        "experience": 0,
+        "xp_to_next_level": 100,
+        "evolves_to": "Fearow",
+        "evolution_level": 20,
+        "moves": [
+            "Peck",
+            "Fury Attack"
+        ]
+    },
+
+    "Zubat": {
+        "types": ["Flying"],
+        "hp": 40,
+        "attack": 45,
+        "defense": 35,
+        "speed": 55,
+        "experience": 0,
+        "xp_to_next_level": 100,
+        "evolves_to": "Golbat",
+        "evolution_level": 22,
+        "moves": [
+            "Bite",
+            "Wing Attack"
+        ]
+    },
+
+    # =========================
+    # ROCK
+    # =========================
+
+    "Geodude": {
+        "types": ["Rock", "Ground"],
+        "hp": 40,
+        "attack": 80,
+        "defense": 100,
+        "speed": 20,
+        "experience": 0,
+        "xp_to_next_level": 100,
+        "evolves_to": "Graveler",
+        "evolution_level": 25,
+        "moves": [
+            "Rock Throw",
+            "Tackle"
+        ]
+    },
+
+    "Onix": {
+        "types": ["Rock", "Ground"],
+        "hp": 35,
+        "attack": 45,
+        "defense": 160,
+        "speed": 70,
+        "experience": 0,
+        "xp_to_next_level": None,
+        "evolves_to": None,
+        "evolution_level": None,
+        "moves": [
+            "Rock Throw",
+            "Bind"
+        ]
+    },
+
+    "Rhyhorn": {
+        "types": ["Rock", "Ground"],
+        "hp": 80,
+        "attack": 85,
+        "defense": 95,
+        "speed": 25,
+        "experience": 0,
+        "xp_to_next_level": 100,
+        "evolves_to": "Rhydon",
+        "evolution_level": 42,
+        "moves": [
+            "Horn Attack",
+            "Rock Blast"
+        ]
+    },    # =========================
+    # GROUND
+    # =========================
+
+    "Sandshrew": {
+        "types": ["Ground"],
+        "hp": 50,
+        "attack": 75,
+        "defense": 85,
+        "speed": 40,
+        "experience": 0,
+        "xp_to_next_level": 100,
+        "evolves_to": "Sandslash",
+        "evolution_level": 22,
+        "moves": [
+            "Scratch",
+            "Sand Attack"
+        ]
+    },
+
+    "Diglett": {
+        "types": ["Ground"],
+        "hp": 10,
+        "attack": 55,
+        "defense": 25,
+        "speed": 95,
+        "experience": 0,
+        "xp_to_next_level": 100,
+        "evolves_to": "Dugtrio",
+        "evolution_level": 26,
+        "moves": [
+            "Scratch",
+            "Dig"
+        ]
+    },
+
+    "Cubone": {
+        "types": ["Ground"],
+        "hp": 50,
+        "attack": 50,
+        "defense": 95,
+        "speed": 35,
+        "experience": 0,
+        "xp_to_next_level": 100,
+        "evolves_to": "Marowak",
+        "evolution_level": 28,
+        "moves": [
+            "Bone Club",
+            "Headbutt"
+        ]
+    },
+
+    # =========================
+    # FIGHTING
+    # =========================
+
+    "Machop": {
+        "types": ["Fighting"],
+        "hp": 70,
+        "attack": 80,
+        "defense": 50,
+        "speed": 35,
+        "experience": 0,
+        "xp_to_next_level": 100,
+        "evolves_to": "Machoke",
+        "evolution_level": 28,
+        "moves": [
+            "Karate Chop",
+            "Low Kick"
+        ]
+    },
+
+    "Mankey": {
+        "types": ["Fighting"],
+        "hp": 40,
+        "attack": 80,
+        "defense": 35,
+        "speed": 70,
+        "experience": 0,
+        "xp_to_next_level": 100,
+        "evolves_to": "Primeape",
+        "evolution_level": 28,
+        "moves": [
+            "Scratch",
+            "Low Kick"
+        ]
+    },
+
+    "Hitmonlee": {
+        "types": ["Fighting"],
+        "hp": 50,
+        "attack": 120,
+        "defense": 55,
+        "speed": 87,
+        "experience": 0,
+        "xp_to_next_level": None,
+        "evolves_to": None,
+        "evolution_level": None,
+        "moves": [
+            "Rolling Kick",
+            "High Jump Kick",
+            "Mega Kick"
+        ]
+    },
+
+    # =========================
+    # GHOST
+    # =========================
+
+    "Gastly": {
+        "types": ["Ghost"],
+        "hp": 30,
+        "attack": 35,
+        "defense": 30,
+        "speed": 80,
+        "experience": 0,
+        "xp_to_next_level": 100,
+        "evolves_to": "Haunter",
+        "evolution_level": 25,
+        "moves": [
+            "Lick",
+            "Night Shade"
+        ]
+    },
+
+    "Haunter": {
+        "types": ["Ghost"],
+        "hp": 45,
+        "attack": 50,
+        "defense": 45,
+        "speed": 95,
+        "experience": 0,
+        "xp_to_next_level": 200,
+        "evolves_to": "Gengar",
+        "evolution_level": 40,
+        "moves": [
+            "Shadow Punch",
+            "Night Shade",
+            "Shadow Ball"
+        ]
+    },
+
+    "Gengar": {
+        "types": ["Ghost"],
+        "hp": 60,
+        "attack": 65,
+        "defense": 60,
+        "speed": 110,
+        "experience": 0,
+        "xp_to_next_level": None,
+        "evolves_to": None,
+        "evolution_level": None,
+        "moves": [
+            "Shadow Ball",
+            "Dream Eater",
+            "Dark Pulse"
+        ]
+    },
+
+    # =========================
+    # NORMAL
+    # =========================
+
+    "Eevee": {
+        "types": ["Normal"],
+        "hp": 55,
+        "attack": 55,
+        "defense": 50,
+        "speed": 55,
+        "experience": 0,
+        "xp_to_next_level": 100,
+        "evolves_to": None,
+        "evolution_level": None,
+        "moves": [
+            "Tackle",
+            "Quick Attack"
+        ]
+    },
+
+    "Meowth": {
+        "types": ["Normal"],
+        "hp": 40,
+        "attack": 45,
+        "defense": 35,
+        "speed": 90,
+        "experience": 0,
+        "xp_to_next_level": 100,
+        "evolves_to": "Persian",
+        "evolution_level": 28,
+        "moves": [
+            "Scratch",
+            "Bite"
+        ]
+    },
+
+    "Snorlax": {
+        "types": ["Normal"],
+        "hp": 160,
+        "attack": 110,
+        "defense": 65,
+        "speed": 30,
+        "experience": 0,
+        "xp_to_next_level": None,
+        "evolves_to": None,
+        "evolution_level": None,
+        "moves": [
+            "Body Slam",
+            "Headbutt",
+            "Rest"
+        ]
+    }
+
+}
