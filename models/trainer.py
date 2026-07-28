@@ -1,4 +1,4 @@
-from functools import partial
+
 
 
 class Trainer:
@@ -7,7 +7,8 @@ class Trainer:
         self._level = 1
         self._xp = 0
 
-        self._pokemons = {}
+        self._pokemons = []
+        self._pokedex = []
         self._pokeballs = {}
         self._items = {}
         self._badges = []
@@ -35,15 +36,29 @@ class Trainer:
 
     # pokemons functions
 
+    def add_pokedex(self, pokemon):
+        if pokemon not in self._pokedex:
+            self._pokedex.append(pokemon)
+            print(f"You have added {pokemon} to your pokedex")
+
     def add_pokemon(self, pokemon):
-        pass
+        self._pokemons.append(pokemon)
+        print(f"You have added {pokemon} to your pokemons")
 
     def remove_pokemon(self, pokemon):
-        pass
+        self._pokemons.pop(pokemon)
+        print(f"You lost a {pokemon} to your pokemons")
 
     def get_pokemons(self):
         pass
 
+    def show_pokemons(self):
+        for pokemon in self._pokemons:
+            print(pokemon)
+
+    def show_pokedex(self):
+        for pokemon in self._pokedex:
+            print(pokemon)
 
     # items functions
 
@@ -54,19 +69,24 @@ class Trainer:
             self._items[item] = amount
         print(f"you have added {amount} {item} to your inventory")
 
-
     def remove_item(self, items):
-        pass
+        self._items[items] -= 1
+        print(f"you lost a {items} to your inventory")
 
     def show_items(self):
         for item, amount in self._items.items():
             print(item, amount)
 
-    def add_pokeball(self, pokeball):
-        pass
+    def add_pokeball(self, pokeball, amount):
+        if self._pokeballs.__contains__(pokeball):
+            self._pokeballs[pokeball] += amount
+        else:
+            self._pokeballs[pokeball] = amount
+        print(f"you have added {amount} {pokeball} to your inventory")
 
     def remove_pokeball(self, pokeball):
-        pass
+        self._pokeballs[pokeball] -= 1
+        print(f"you lost a {pokeball}")
 
 
     # badges functions
@@ -110,3 +130,4 @@ player.add_item("churrasco", 2)
 player.add_item("churrasco", 1)
 player.add_item("sco", 2)
 player.show_items()
+player.add_pokeball("master ball", 10)
