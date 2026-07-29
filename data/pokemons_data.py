@@ -5,6 +5,7 @@ POKEMONS = {
     # =========================
 
     "Bulbasaur": {
+        "species": "Bulbasaur",
         "types": ["Grass"],
         "hp": 45,
         "attack": 49,
@@ -21,6 +22,7 @@ POKEMONS = {
     },
 
     "Ivysaur": {
+        "species": "Ivysaur",
         "types": ["Grass"],
         "hp": 60,
         "attack": 62,
@@ -38,6 +40,7 @@ POKEMONS = {
     },
 
     "Venusaur": {
+        "species": "Venusaur",
         "types": ["Grass"],
         "hp": 82,
         "attack": 82,
@@ -59,6 +62,7 @@ POKEMONS = {
     # =========================
 
     "Charmander": {
+        "species": "Charmander",
         "types": ["Fire"],
         "hp": 39,
         "attack": 52,
@@ -75,6 +79,7 @@ POKEMONS = {
     },
 
     "Charmeleon": {
+        "species": "Charmeleon",
         "types": ["Fire"],
         "hp": 58,
         "attack": 64,
@@ -92,6 +97,7 @@ POKEMONS = {
     },
 
     "Charizard": {
+        "species": "Charizard",
         "types": ["Fire", "Flying"],
         "hp": 78,
         "attack": 84,
@@ -113,6 +119,7 @@ POKEMONS = {
     # =========================
 
     "Squirtle": {
+        "species": "Squirtle",
         "types": ["Water"],
         "hp": 44,
         "attack": 48,
@@ -129,6 +136,7 @@ POKEMONS = {
     },
 
     "Wartortle": {
+        "species": "Wartortle",
         "types": ["Water"],
         "hp": 59,
         "attack": 63,
@@ -146,6 +154,7 @@ POKEMONS = {
     },
 
     "Blastoise": {
+        "species": "Blastoise",
         "types": ["Water"],
         "hp": 79,
         "attack": 83,
@@ -167,6 +176,7 @@ POKEMONS = {
     # =========================
 
     "Pikachu": {
+        "species": "Pikachu",
         "types": ["Electric"],
         "hp": 35,
         "attack": 55,
@@ -183,6 +193,7 @@ POKEMONS = {
     },
 
     "Magnemite": {
+        "species": "Magnemite",
         "types": ["Electric"],
         "hp": 40,
         "attack": 35,
@@ -199,6 +210,7 @@ POKEMONS = {
     },
 
     "Voltorb": {
+        "species": "Voltorb",
         "types": ["Electric"],
         "hp": 40,
         "attack": 30,
@@ -219,6 +231,7 @@ POKEMONS = {
     # =========================
 
     "Pidgey": {
+        "species": "Pidgey",
         "types": ["Flying"],
         "hp": 40,
         "attack": 45,
@@ -235,6 +248,7 @@ POKEMONS = {
     },
 
     "Spearow": {
+        "species": "Spearow",
         "types": ["Flying"],
         "hp": 40,
         "attack": 60,
@@ -251,6 +265,7 @@ POKEMONS = {
     },
 
     "Zubat": {
+        "species": "Zubat",
         "types": ["Flying"],
         "hp": 40,
         "attack": 45,
@@ -271,6 +286,7 @@ POKEMONS = {
     # =========================
 
     "Geodude": {
+        "species": "Geodude",
         "types": ["Rock", "Ground"],
         "hp": 40,
         "attack": 80,
@@ -287,6 +303,7 @@ POKEMONS = {
     },
 
     "Onix": {
+        "species": "Onix",
         "types": ["Rock", "Ground"],
         "hp": 35,
         "attack": 45,
@@ -303,6 +320,7 @@ POKEMONS = {
     },
 
     "Rhyhorn": {
+        "species": "Rhyhorn",
         "types": ["Rock", "Ground"],
         "hp": 80,
         "attack": 85,
@@ -316,11 +334,14 @@ POKEMONS = {
             "Horn Attack",
             "Rock Blast"
         ]
-    },    # =========================
+    },
+
+    # =========================
     # GROUND
     # =========================
 
     "Sandshrew": {
+        "species": "Sandshrew",
         "types": ["Ground"],
         "hp": 50,
         "attack": 75,
@@ -337,6 +358,7 @@ POKEMONS = {
     },
 
     "Diglett": {
+        "species": "Diglett",
         "types": ["Ground"],
         "hp": 10,
         "attack": 55,
@@ -353,6 +375,7 @@ POKEMONS = {
     },
 
     "Cubone": {
+        "species": "Cubone",
         "types": ["Ground"],
         "hp": 50,
         "attack": 50,
@@ -373,6 +396,7 @@ POKEMONS = {
     # =========================
 
     "Machop": {
+        "species": "Machop",
         "types": ["Fighting"],
         "hp": 70,
         "attack": 80,
@@ -389,6 +413,7 @@ POKEMONS = {
     },
 
     "Mankey": {
+        "species": "Mankey",
         "types": ["Fighting"],
         "hp": 40,
         "attack": 80,
@@ -405,6 +430,7 @@ POKEMONS = {
     },
 
     "Hitmonlee": {
+        "species": "Hitmonlee",
         "types": ["Fighting"],
         "hp": 50,
         "attack": 120,
@@ -426,6 +452,7 @@ POKEMONS = {
     # =========================
 
     "Gastly": {
+        "species": "Gastly",
         "types": ["Ghost"],
         "hp": 30,
         "attack": 35,
@@ -442,6 +469,7 @@ POKEMONS = {
     },
 
     "Haunter": {
+        "species": "Haunter",
         "types": ["Ghost"],
         "hp": 45,
         "attack": 50,
@@ -459,6 +487,7 @@ POKEMONS = {
     },
 
     "Gengar": {
+        "species": "Gengar",
         "types": ["Ghost"],
         "hp": 60,
         "attack": 65,
@@ -480,6 +509,7 @@ POKEMONS = {
     # =========================
 
     "Eevee": {
+        "species": "Eevee",
         "types": ["Normal"],
         "hp": 55,
         "attack": 55,
@@ -496,6 +526,7 @@ POKEMONS = {
     },
 
     "Meowth": {
+        "species": "Meowth",
         "types": ["Normal"],
         "hp": 40,
         "attack": 45,
@@ -512,6 +543,7 @@ POKEMONS = {
     },
 
     "Snorlax": {
+        "species": "Snorlax",
         "types": ["Normal"],
         "hp": 160,
         "attack": 110,
