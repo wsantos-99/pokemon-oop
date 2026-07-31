@@ -15,6 +15,7 @@ POKEMONS = {
         "xp_to_next_level": 100,
         "evolves_to": "Ivysaur",
         "evolution_level": 16,
+        "wild_level_range": [1, 15],
         "moves": [
             "Tackle",
             "Vine Whip"
@@ -32,6 +33,7 @@ POKEMONS = {
         "xp_to_next_level": 200,
         "evolves_to": "Venusaur",
         "evolution_level": 32,
+        "wild_level_range": [16, 31],
         "moves": [
             "Vine Whip",
             "Razor Leaf",
@@ -50,6 +52,7 @@ POKEMONS = {
         "xp_to_next_level": None,
         "evolves_to": None,
         "evolution_level": None,
+        "wild_level_range": [32, 100],
         "moves": [
             "Razor Leaf",
             "Solar Beam",
@@ -72,6 +75,7 @@ POKEMONS = {
         "xp_to_next_level": 100,
         "evolves_to": "Charmeleon",
         "evolution_level": 16,
+        "wild_level_range": [1, 15],
         "moves": [
             "Scratch",
             "Ember"
@@ -89,6 +93,7 @@ POKEMONS = {
         "xp_to_next_level": 200,
         "evolves_to": "Charizard",
         "evolution_level": 36,
+        "wild_level_range": [16, 35],
         "moves": [
             "Ember",
             "Metal Claw",
@@ -107,6 +112,7 @@ POKEMONS = {
         "xp_to_next_level": None,
         "evolves_to": None,
         "evolution_level": None,
+        "wild_level_range": [36, 100],
         "moves": [
             "Flamethrower",
             "Fire Blast",
@@ -129,6 +135,7 @@ POKEMONS = {
         "xp_to_next_level": 100,
         "evolves_to": "Wartortle",
         "evolution_level": 16,
+        "wild_level_range": [1, 15],
         "moves": [
             "Tackle",
             "Water Gun"
@@ -146,6 +153,7 @@ POKEMONS = {
         "xp_to_next_level": 200,
         "evolves_to": "Blastoise",
         "evolution_level": 36,
+        "wild_level_range": [16, 35],
         "moves": [
             "Water Gun",
             "Bubble",
@@ -164,6 +172,7 @@ POKEMONS = {
         "xp_to_next_level": None,
         "evolves_to": None,
         "evolution_level": None,
+        "wild_level_range": [36, 100],
         "moves": [
             "Hydro Pump",
             "Surf",
@@ -186,6 +195,7 @@ POKEMONS = {
         "xp_to_next_level": 100,
         "evolves_to": "Raichu",
         "evolution_level": 30,
+        "wild_level_range": [1, 29],
         "moves": [
             "Thunder Shock",
             "Quick Attack"
@@ -203,6 +213,7 @@ POKEMONS = {
         "xp_to_next_level": 100,
         "evolves_to": "Magneton",
         "evolution_level": 30,
+        "wild_level_range": [1, 29],
         "moves": [
             "Thunder Shock",
             "Spark"
@@ -220,6 +231,7 @@ POKEMONS = {
         "xp_to_next_level": 100,
         "evolves_to": "Electrode",
         "evolution_level": 30,
+        "wild_level_range": [1, 29],
         "moves": [
             "Spark",
             "Swift"
@@ -241,6 +253,7 @@ POKEMONS = {
         "xp_to_next_level": 100,
         "evolves_to": "Pidgeotto",
         "evolution_level": 18,
+        "wild_level_range": [1, 17],
         "moves": [
             "Tackle",
             "Gust"
@@ -258,6 +271,7 @@ POKEMONS = {
         "xp_to_next_level": 100,
         "evolves_to": "Fearow",
         "evolution_level": 20,
+        "wild_level_range": [1, 19],
         "moves": [
             "Peck",
             "Fury Attack"
@@ -275,6 +289,7 @@ POKEMONS = {
         "xp_to_next_level": 100,
         "evolves_to": "Golbat",
         "evolution_level": 22,
+        "wild_level_range": [1, 21],
         "moves": [
             "Bite",
             "Wing Attack"
@@ -296,6 +311,7 @@ POKEMONS = {
         "xp_to_next_level": 100,
         "evolves_to": "Graveler",
         "evolution_level": 25,
+        "wild_level_range": [1, 24],
         "moves": [
             "Rock Throw",
             "Tackle"
@@ -313,6 +329,7 @@ POKEMONS = {
         "xp_to_next_level": None,
         "evolves_to": None,
         "evolution_level": None,
+        "wild_level_range": [1, 100],
         "moves": [
             "Rock Throw",
             "Bind"
@@ -330,6 +347,7 @@ POKEMONS = {
         "xp_to_next_level": 100,
         "evolves_to": "Rhydon",
         "evolution_level": 42,
+        "wild_level_range": [1, 41],
         "moves": [
             "Horn Attack",
             "Rock Blast"
@@ -351,6 +369,7 @@ POKEMONS = {
         "xp_to_next_level": 100,
         "evolves_to": "Sandslash",
         "evolution_level": 22,
+        "wild_level_range": [1, 21],
         "moves": [
             "Scratch",
             "Sand Attack"
@@ -368,6 +387,7 @@ POKEMONS = {
         "xp_to_next_level": 100,
         "evolves_to": "Dugtrio",
         "evolution_level": 26,
+        "wild_level_range": [1, 25],
         "moves": [
             "Scratch",
             "Dig"
@@ -385,6 +405,7 @@ POKEMONS = {
         "xp_to_next_level": 100,
         "evolves_to": "Marowak",
         "evolution_level": 28,
+        "wild_level_range": [1, 27],
         "moves": [
             "Bone Club",
             "Headbutt"
@@ -406,6 +427,7 @@ POKEMONS = {
         "xp_to_next_level": 100,
         "evolves_to": "Machoke",
         "evolution_level": 28,
+        "wild_level_range": [1, 27],
         "moves": [
             "Karate Chop",
             "Low Kick"
@@ -423,6 +445,7 @@ POKEMONS = {
         "xp_to_next_level": 100,
         "evolves_to": "Primeape",
         "evolution_level": 28,
+        "wild_level_range": [1, 27],
         "moves": [
             "Scratch",
             "Low Kick"
@@ -440,6 +463,7 @@ POKEMONS = {
         "xp_to_next_level": None,
         "evolves_to": None,
         "evolution_level": None,
+        "wild_level_range": [1, 100],
         "moves": [
             "Rolling Kick",
             "High Jump Kick",
@@ -462,6 +486,7 @@ POKEMONS = {
         "xp_to_next_level": 100,
         "evolves_to": "Haunter",
         "evolution_level": 25,
+        "wild_level_range": [1, 24],
         "moves": [
             "Lick",
             "Night Shade"
@@ -479,6 +504,7 @@ POKEMONS = {
         "xp_to_next_level": 200,
         "evolves_to": "Gengar",
         "evolution_level": 40,
+        "wild_level_range": [25, 39],
         "moves": [
             "Shadow Punch",
             "Night Shade",
@@ -497,6 +523,7 @@ POKEMONS = {
         "xp_to_next_level": None,
         "evolves_to": None,
         "evolution_level": None,
+        "wild_level_range": [40, 100],
         "moves": [
             "Shadow Ball",
             "Dream Eater",
@@ -519,6 +546,7 @@ POKEMONS = {
         "xp_to_next_level": 100,
         "evolves_to": None,
         "evolution_level": None,
+        "wild_level_range": [1, 100],
         "moves": [
             "Tackle",
             "Quick Attack"
@@ -536,6 +564,7 @@ POKEMONS = {
         "xp_to_next_level": 100,
         "evolves_to": "Persian",
         "evolution_level": 28,
+        "wild_level_range": [1, 27],
         "moves": [
             "Scratch",
             "Bite"
@@ -553,6 +582,7 @@ POKEMONS = {
         "xp_to_next_level": None,
         "evolves_to": None,
         "evolution_level": None,
+        "wild_level_range": [1, 100],
         "moves": [
             "Body Slam",
             "Headbutt",
