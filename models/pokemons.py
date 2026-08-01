@@ -1,4 +1,5 @@
 import data.pokemons_data as pokemons_data
+import trainer as trainer
 import random
 
 
@@ -108,8 +109,8 @@ class PlayerPokemon(Pokemon):
 
 
 
-charmander = PlayerPokemon("Charmander", name="Charmander", level=1, iv=0.2)
-charmander.gain_experience(4000000000000000000000000000)
+# charmander = PlayerPokemon("Charmander", name="Charmander", level=1, iv=0.2)
+# charmander.gain_experience(4000000000000000000000000000)
 
 
 
