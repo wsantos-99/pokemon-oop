@@ -1,6 +1,3 @@
-
-
-
 class Trainer:
     def __init__(self, name):
         self._name = name
@@ -15,42 +12,67 @@ class Trainer:
 
         self._gold = 0
 
+    # ---------- Properties ----------
 
-    # trainer functions
+    @property
+    def name(self):
+        return self._name
+
+    @property
+    def level(self):
+        return self._level
+
+    @level.setter
+    def level(self, value):
+        self._level = max(1, min(100, value))
+
+    @property
+    def gold(self):
+        return self._gold
+
+    @property
+    def pokemons(self):
+        return self._pokemons
+
+    @property
+    def pokedex(self):
+        return self._pokedex
+
+    # ---------- Trainer ----------
 
     def level_up(self, level):
-        self._level += level
+        self.level += level
 
     def gain_experience(self, experience):
-        print(f"you gain {experience} experience")
+        print(f"You gained {experience} experience.")
+
         partial_level = 0
         self._xp += experience
-        if self._xp >= 100:
-            while self._xp >= 100:
-                self._xp -= 100
-                partial_level += 1
-                print("Level up!")
+
+        while self._xp >= 100:
+            self._xp -= 100
+            partial_level += 1
+
+        if partial_level:
+            print("Level Up!")
             self.level_up(partial_level)
-            print(f"You have just reached Level {self._level}")
+            print(f"You have just reached Level {self.level}")
 
-
-    # pokemons functions
+    # ---------- Pokémon ----------
 
     def add_pokedex(self, pokemon):
         if pokemon not in self._pokedex:
             self._pokedex.append(pokemon)
-            print(f"You have added {pokemon} to your pokedex")
+            print(f"{pokemon} was added to your Pokédex.")
 
     def add_pokemon(self, pokemon):
         self._pokemons.append(pokemon)
-        print(f"You have added {pokemon} to your pokemons")
+        print(f"{pokemon} joined your team.")
 
     def remove_pokemon(self, pokemon):
-        self._pokemons.pop(pokemon)
-        print(f"You lost a {pokemon} to your pokemons")
-
-    def get_pokemons(self):
-        pass
+        if pokemon in self._pokemons:
+            self._pokemons.remove(pokemon)
+            print(f"{pokemon} was removed from your team.")
 
     def show_pokemons(self):
         for pokemon in self._pokemons:
@@ -60,74 +82,72 @@ class Trainer:
         for pokemon in self._pokedex:
             print(pokemon)
 
-    # items functions
+    # ---------- Items ----------
 
     def add_item(self, item, amount):
-        if self._items.__contains__(item):
+        if item in self._items:
             self._items[item] += amount
         else:
             self._items[item] = amount
-        print(f"you have added {amount} {item} to your inventory")
 
-    def remove_item(self, items):
-        self._items[items] -= 1
-        print(f"you lost a {items} to your inventory")
+        print(f"You received {amount} {item}.")
+
+    def remove_item(self, item):
+        if item in self._items:
+            self._items[item] -= 1
+
+            if self._items[item] <= 0:
+                del self._items[item]
+
+            print(f"You used 1 {item}.")
 
     def show_items(self):
         for item, amount in self._items.items():
             print(item, amount)
 
+    # ---------- Pokéballs ----------
+
     def add_pokeball(self, pokeball, amount):
-        if self._pokeballs.__contains__(pokeball):
+        if pokeball in self._pokeballs:
             self._pokeballs[pokeball] += amount
         else:
             self._pokeballs[pokeball] = amount
-        print(f"you have added {amount} {pokeball} to your inventory")
+
+        print(f"You received {amount} {pokeball}.")
 
     def remove_pokeball(self, pokeball):
-        self._pokeballs[pokeball] -= 1
-        print(f"you lost a {pokeball}")
+        if pokeball in self._pokeballs:
+            self._pokeballs[pokeball] -= 1
 
+            if self._pokeballs[pokeball] <= 0:
+                del self._pokeballs[pokeball]
 
-    # badges functions
+            print(f"You used 1 {pokeball}.")
+
+    # ---------- Badges ----------
 
     def add_badge(self, badge):
         self._badges.append(badge)
-        print(f"You have earned the Badge: {badge}")
+        print(f"You earned the Badge: {badge}")
 
     def count_badges(self):
-        print(f"you have {len(self._badges)} Badges")
+        return len(self._badges)
 
     def show_badges(self):
-        self.count_badges()
+        print(f"Badges: {self.count_badges()}")
+
         for badge in self._badges:
             print(badge)
 
-
-    # gold functions
+    # ---------- Gold ----------
 
     def add_gold(self, gold):
         self._gold += gold
-        print(f"you received {gold} gold")
+        print(f"You received {gold} gold.")
 
     def remove_gold(self, gold):
         self._gold -= gold
-        print(f"You lost {gold} gold")
+        print(f"You lost {gold} gold.")
 
     def show_gold(self):
-        print(f"you have {self._gold} gold")
-
-
-# player = Trainer("player")
-# player.gain_experience(300)
-# player.add_badge("macaco")
-# player.add_badge("pato")
-# player.show_badges()
-# player.add_gold(12)
-# player.remove_gold(1)
-# player.show_gold()
-# player.add_item("churrasco", 2)
-# player.add_item("churrasco", 1)
-# player.add_item("sco", 2)
-# player.show_items()
-# player.add_pokeball("master ball", 10)
+        print(f"Gold: {self.gold}")

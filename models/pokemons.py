@@ -1,5 +1,4 @@
 import data.pokemons_data as pokemons_data
-import trainer as trainer
 import random
 
 
@@ -24,22 +23,63 @@ class Pokemon:
         self._speed = pokemon["speed"]
         self._moves = pokemon["moves"]
 
+        self._update_stats()
+        self._current_hp = pokemon["hp"]
+
     def __str__(self):
-        if self._name != "":
-            return f"{self._name} {self._species} {self._level}"
-        else:
-            return f"{self._species} {self._level}"
+        return f"{self._name} {self._species} {self.level}"
+
+    def _update_stats(self):
+        self._hp = self._data["hp"] * self._iv
+        self._attack = self._data["attack"] * self._iv
+        self._defense = self._data["defense"] * self._iv
+        self._speed = self._data["speed"] * self._iv
+        self._moves = self._data["moves"]
+
+    @property
+    def name(self):
+        return self._name
+
+    @property
+    def species(self):
+        return self._species
+
+    @property
+    def level(self):
+        return self._level
+
+    @level.setter
+    def level(self, value):
+        self._level = max(1, min(100, value))
+
+    @property
+    def hp(self):
+        return self._hp
+
+    @property
+    def types(self):
+        return self._types
+
+    @property
+    def moves(self):
+        return self._moves
+
+    def take_damage(self, damage):
+        pass
+
+    def attack(self, move, target):
+        pass
 
 
 class WildPokemon(Pokemon):
     def __init__(self, pokemon, name="", level=1):
         super().__init__(pokemon, level=level)
-        self._iv = random.uniform(0.1, 0.4)
+
 
 
 class PlayerPokemon(Pokemon):
     def __init__(self, pokemon, name="", level=1, iv=1):
-        super().__init__(pokemon, name, level, iv)
+        super().__init__(pokemon, name, level)
 
         self._experience = 0
         self._xp_to_next_level = 100
@@ -54,15 +94,18 @@ class PlayerPokemon(Pokemon):
         self._species = self._data["species"]
         self._types = self._data["types"]
 
-        self._hp = self._data["hp"] * self._iv
-        self._attack = self._data["attack"] * self._iv
-        self._defense = self._data["defense"] * self._iv
-        self._speed = self._data["speed"] * self._iv
-        self._moves = self._data["moves"]
+        self._update_stats()
 
         self._evolves_to = self._data["evolves_to"]
         self._evolution_level = self._data["evolution_level"]
 
+    @property
+    def experience(self):
+        return self._experience
+
+    @property
+    def evolves_to(self):
+        return self._evolves_to
 
     def level_up(self, level):
         self._level += level

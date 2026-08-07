@@ -1,39 +1,38 @@
 import random
+
 import data.pokemons_data as pokemons_data
-from models.trainer import Trainer
+from models.pokemons import WildPokemon
 
 
 def get_pokemons_by_level(level):
-    available_pokemons = []
+    available_species = []
 
-    for pokemon_name, pokemon_data in pokemons_data.POKEMONS.items():
-        min_level, max_level = pokemon_data["wild_level_range"]
+    for species, data in pokemons_data.POKEMONS.items():
+        min_level, max_level = data["wild_level_range"]
 
         if min_level <= level <= max_level:
-            available_pokemons.append(pokemon_name)
-    print(f"{available_pokemons}")
-    return available_pokemons
+            available_species.append(species)
+
+    return available_species
 
 
 def pokemon_create(trainer):
-    player_level = trainer._level
+    level = random.randint(
+        max(1, trainer.level - 3),
+        min(100, trainer.level + 2)
+    )
 
-    level = random.randint(max(1, player_level - 3), min(100, player_level + 2))
+    available_species = get_pokemons_by_level(level)
 
-    available_pokemons = get_pokemons_by_level(level)
-
-    if not available_pokemons:
+    if not available_species:
         return None
 
-    pokemon_name = random.choice(available_pokemons)
+    species = random.choice(available_species)
 
-    print(f"Pokémon: {pokemon_name} (Lv {level})")
+    iv = round(random.uniform(0.1, 0.4), 2)
 
-    return pokemon_name, level
-
-
-player = Trainer("player")
-player._level = 65
-
-pokemon_create(player)
-
+    return WildPokemon(
+        species,
+        level=level,
+        iv=iv
+    )
